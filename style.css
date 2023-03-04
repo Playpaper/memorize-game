@@ -1,0 +1,185 @@
+#card-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  /* card 外部 */
+  width: 7%;
+  height: 8vw;
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+  box-sizing: border-box;
+  /* card 內部 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card.back:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: .7;
+  /* border: 2px solid #6ccfc5; */
+}
+
+.card img{
+  width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: #dae0e3;
+}
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+/* === Header === */
+#header {
+  display: flex;
+}
+
+.game-choose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  width: 65%;
+}
+
+.card-amount,
+.symbol-amount {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.form-label{
+  margin: 0 5px;
+}
+
+.form-select {
+  width: 110px;
+}
+
+.btn-play {
+  height: 40px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background: #999;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.btn-play i {
+  color: #fff;
+  padding-left: 0.2em;
+  font-size: 1.1em;
+}
+
+.btn-play:hover i {
+  transform: translateX(0.3em);
+  transition: 0.2s;
+}
+
+.btn-play:hover {
+  cursor: pointer;
+  background: #469490;
+  transition: 0.2s;
+}
+
+.game-record {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  /* width: 65%; */
+}
+
+.game-record .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.game-record .title img {
+  max-width: 3em;
+}
+
+.game-record .title h2 {
+  margin: 0;
+  padding-left: 0.5em;
+}
+
+.game-record .score {
+  margin: 0;
+  color: #6c90ac;
+  font-size: 1.6em;
+}
+
+.game-record .tried {
+  margin: 0.5em 0;
+  font-size: 1.1em;
+}
+
+/* === Game finished === */
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.completed>p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.completed>p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
+
+.hide {
+  display: none;
+}
